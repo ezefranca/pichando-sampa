@@ -1,27 +1,135 @@
 <!-- EH FELA DA PUTA JA VEIO VER O SOURCE, TA NO GITHUB, PORCAO ESSE CODIGO, O QUE VALE EH A ZUEIRA! -->
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="css/estilo.css" />
- 
-	<title>PIXANDO BORBA GATO</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>    
+  <link rel="stylesheet" type="text/css" href="http://bgrins.github.com/spectrum/spectrum.css">
+ <script type="text/javascript" src="http://bgrins.github.com/spectrum/spectrum.js"></script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
 
+
+  <style type="text/css">
+    .full-spectrum .sp-palette {
+max-width: 200px;
+}
+
+  </style>
+  <style type="text/css">
+    .wrapper {
+  position: relative;
+  width: 1200px;
+  height: 816px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.signature-pad {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width:1200px;
+  height:816px;
+}
+  </style>
+
+  <title>PIXADOR - Pixe o Borba Gato</title>
+
+<script type="text/javascript">var pixacolor = 'rgb(0, 0, 0)'; var signaturePad;</script>
+
+<script type='text/javascript'>//<![CDATA[
+window.onload=function(){
+	setup();
+}
+function trocarCor(color) {
+	signaturePad.penColor = color;
+}
+
+function setup() {
+ signaturePad = new SignaturePad(document.getElementById('signature-pad'), {
+  backgroundColor: 'rgba(255, 255, 255, 0)',
+  penColor: pixacolor
+});
+var saveButton = document.getElementById('save');
+var cancelButton = document.getElementById('clear');
+
+saveButton.addEventListener('click', function (event) {
+  var data = signaturePad.toDataURL('image/png');
+
+// Send data to server instead...
+  window.open(data);
+});
+
+cancelButton.addEventListener('click', function (event) {
+  signaturePad.clear();
+});
+}//]]> 
+
+</script>
+  
 </head>
 
 <body>
-<div class="wrapper">
-	<h1> VEM LIMPAR DÓRIA!</h1>
-  <img src="http://www.licensing.biz/cimages/c0f1a3a97bc0de97271f9813f7715bb3.png" width=400 height=200 />
-  <canvas id="signature-pad" class="signature-pad" width=400 height=200></canvas>
-</div>
+  <h1>
+  Dória vem limpar o Borba Gato!
+</h1>
+
+<h5>Escolha a cor</h5>
+<input type='text' class="basic"/>
+<em id='basic-log'></em>
+<script type='text/javascript'>//<![CDATA[
+
+$(".basic").spectrum({
+    color: "#f00",
+    change: function(color) {
+        $("#basic-log").text("change called: " + color.toRgbString() + pixacolor);
+        pixacolor = color.toRgbString();
+  		trocarCor(pixacolor);
+    }
+
+
+});
+
+
+</script>
 <div>
-  <button id="save">Salvar!</button>
-  <button id="clear">Limpar</button>
+  <button id="save">Salvar</button>
+  <button id="clear">Limpar civilizadamente</button>
 </div>
-<script type="text/javascript" src="js/signature.js"></script>
-  <script src="js/signature_pad.js"></script>
-  <script src="js/signature_pad.min.js"></script>
-  </body>
+<div class="wrapper">
+		<img src="http://www3.al.sp.gov.br/repositorio/noticia/07-2008/Borba%20Gato01.jpg" width=1200 height=816 />
+		<canvas id="signature-pad" class="signature-pad" width=1200 height=816></canvas>
+</div>
+
+
+
+  <a href='http://bgrins.github.com/spectrum'> 1 - :)</a>
+  <a href='https://github.com/szimek/signature_pad'> 2 - =)</a>
+  
+  <a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text="
+  data-size="large">
+Tuitar isso aqui!</a>
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.js"></script> -->
+</body>
+
 </html>
+
+
+
+
 
 
