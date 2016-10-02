@@ -95,7 +95,7 @@ cancelButton.addEventListener('click', function (event) {
 $(".basic").spectrum({
     color: "#f00",
     change: function(color) {
-        $("#basic-log").text("change called: " + color.toRgbString() + pixacolor);
+        // $("#basic-log").text("change called: " + color.toRgbString() + pixacolor);
         pixacolor = color.toRgbString();
   		trocarCor(pixacolor);
     }
