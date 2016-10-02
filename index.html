@@ -1,8 +1,5 @@
 <!-- EH FELA DA PUTA JA VEIO VER O SOURCE, TA NO GITHUB, PORCAO ESSE CODIGO, O QUE VALE EH A ZUEIRA! No rodapé tem as libs maneiras. flw -->
 
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,73 +10,11 @@
   <link rel="stylesheet" type="text/css" href="http://bgrins.github.com/spectrum/spectrum.css">
  <script type="text/javascript" src="http://bgrins.github.com/spectrum/spectrum.js"></script>
  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
-
-
-  <style type="text/css">
-    .full-spectrum .sp-palette {
-max-width: 200px;
-}
-
-  </style>
-  <style type="text/css">
-    .wrapper {
-  position: relative;
-  width: 1200px;
-  height: 816px;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-img {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.signature-pad {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width:1200px;
-  height:816px;
-}
-  </style>
+<script type="text/javascript" src="js/tinta.js"></script>
+<link rel="stylesheet" type="text/css" href="css/estilo.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" />
 
   <title>PIXADOR - Pixe o Borba Gato</title>
-
-<script type="text/javascript">var pixacolor = 'rgb(255, 0, 0)'; var signaturePad;</script>
-
-<script type='text/javascript'>//<![CDATA[
-window.onload=function(){
-	setup();
-}
-function trocarCor(color) {
-	signaturePad.penColor = color;
-}
-
-function setup() {
- signaturePad = new SignaturePad(document.getElementById('signature-pad'), {
-  backgroundColor: 'rgba(255, 255, 255, 0)',
-  penColor: pixacolor
-});
-var saveButton = document.getElementById('save');
-var cancelButton = document.getElementById('clear');
-
-saveButton.addEventListener('click', function (event) {
-  var data = signaturePad.toDataURL('image/png');
-
-// Send data to server instead...
-  window.open(data);
-});
-
-cancelButton.addEventListener('click', function (event) {
-  signaturePad.clear();
-});
-}//]]> 
-
-</script>
-  
 </head>
 
 <body>
@@ -90,31 +25,14 @@ cancelButton.addEventListener('click', function (event) {
 <h5>Escolha a cor</h5>
 <input type='text' class="basic"/>
 <em id='basic-log'></em>
-<script type='text/javascript'>//<![CDATA[
-
-$(".basic").spectrum({
-    color: "#f00",
-    change: function(color) {
-        // $("#basic-log").text("change called: " + color.toRgbString() + pixacolor);
-        pixacolor = color.toRgbString();
-  		trocarCor(pixacolor);
-    }
-
-
-});
-
-
-</script>
 <div>
-  <button id="save">Salvar</button>
-  <button id="clear">Limpar civilizadamente</button>
+<button id="save" type="button">Salvar</button>
+<button id="clear" type="button">Limpar civilizadamente</button>
 </div>
 <div class="wrapper">
 		<img src="http://www3.al.sp.gov.br/repositorio/noticia/07-2008/Borba%20Gato01.jpg" width=1200 height=816 />
 		<canvas id="signature-pad" class="signature-pad" width=1200 height=816></canvas>
 </div>
-
-
 
   <a href='http://bgrins.github.com/spectrum'> 1 - :)</a>
   <a href='https://github.com/szimek/signature_pad'> 2 - =)</a>
@@ -123,7 +41,8 @@ $(".basic").spectrum({
   href="https://twitter.com/intent/tweet?text=http://www.ezefranca.com/pichando-sampa/ #eleicoes2016"
   data-size="large">
 Tuitar isso aqui!</a>
-<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.js"></script> -->
+<a class="github-fork-ribbon" href="http://url.to-your.repo" title="Fork me on GitHub">Fork me on GitHub</a>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>

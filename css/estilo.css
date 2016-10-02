@@ -1,9 +1,25 @@
 .wrapper {
   position: relative;
-  width: 400px;
-  height: 200px;
+  width: 1200px;
+  height: 816px;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.signature-pad {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width:1200px;
+  height:816px;
+}
+.full-spectrum .sp-palette {
+max-width: 200px;
 }
