@@ -1,3 +1,4 @@
+//tinta
 var pixacolor = 'rgb(255, 0, 0)'; 
 var signaturePad;
 
